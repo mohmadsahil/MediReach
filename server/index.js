@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
 import {DBConnection} from "./DB/connections.js";
 import cloudinary from "cloudinary";
-import messageRouter from "./Routers/messageRouter.js";
+import router from "./Routers/messageRouter.js";
 
 const app = express();
 config({path :"./config/config.env"});          //Connect to the confiq file
@@ -25,7 +25,7 @@ app.use(fileUpload({
     tempFileDir:"/tmp/",
 }));
 
-app.use("/api",messageRouter);
+app.use("/api",router);
 
 DBConnection();     //Database Connected
 
