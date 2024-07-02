@@ -1,0 +1,85 @@
+/* *{
+    padding-left: 5px;
+    padding-right: 8px;
+} */
+
+.mainNav{
+    width: 100%;
+    height: auto;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    margin-left: 30px;
+}
+.logo1{
+    color:#112437;
+    background-color: yellow;
+}
+.logo2{
+    color: #01BF89;
+    padding-left: 1px;
+    background-color: yellow;
+}
+.menuLinksItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.menuLinksItems a {
+    text-decoration: none;
+    background-color: yellow;
+    padding: 0px 20px 0px 20px;
+    font-size: 20px;
+    color: #112437;
+}
+.signUpButton{
+    padding: 3px 18px 3px 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: #01BF89;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *********************RESPONSIVE******************************* */
+
+
+@media screen and (max-width: 950px) {
+    .mainNav {
+      background-color: lightgreen;
+    }
+  }
