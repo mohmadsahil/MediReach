@@ -7,7 +7,9 @@ import {DBConnection} from "./DB/connections.js";
 import cloudinary from "cloudinary";
 import router from "./Routers/messageRouter.js";
 
+
 const app = express();
+
 config({path :"./config/config.env"});          //Connect to the confiq file
 
 app.use(cors({
@@ -24,6 +26,7 @@ app.use(fileUpload({
     useTempFiles:true,
     tempFileDir:"/tmp/",
 }));
+app.use(express.json());
 
 app.use("/api",router);
 
