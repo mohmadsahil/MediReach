@@ -14,13 +14,13 @@ export const patientRegister = catchAsynchErrors(async(req,res,next)=>{
         return next(new createError("User Already Register, Kindly Login!",400));
     }
     else{
-        const user = new User(req.body);
-        const saveData = await user.save();
-        generateToken(user,"User Has Been Register Successfully!",200,res)
+        const userData = new User(req.body);
+        const saveData = await userData.save();
+        generateToken(userData,"User Has Been Register Successfully!",200,res)
     }
 })
 
-export const patientLogin = catchAsynchErrors(async(req,res,next)=>{
+export const Login = catchAsynchErrors(async(req,res,next)=>{
     const{phone,password,confirmPassword,role} = req.body;
     if(!phone || !password || !confirmPassword || !role){
         return next(new createError("Kindly Enter Correct Details!",400))
@@ -31,6 +31,7 @@ export const patientLogin = catchAsynchErrors(async(req,res,next)=>{
     }
 
     const userExist = await User.findOne({phone})
+
     if(!userExist){
         return next(new createError("Invalid Details,Kindly Login Again!",400))
     }
@@ -66,4 +67,42 @@ export const addNewAdmin = catchAsynchErrors(async(req,res,next)=>{
             messsage:"New Admin Registered!",
         })
     }
+})
+
+
+export const getAllDoctors = catchAsynchErrors(async(req,res,next)=>{
+    const finddoctor = await User.find({role:"Doctor"});
+    res.status(200).json({
+        success:true,
+        finddoctor,
+    });
+})
+
+
+export const getUserDetails = catchAsynchErrors(async(req,res,next)=>{
+    const user = req.user;    //to store information about the authenticated user.
+    res.status(200).json({
+        success:true,
+        user,
+    })
+}) 
+
+export const logoutAdmin = catchAsynchErrors(async(req,res,next)=>{
+    res.status(200).cookie("adminToken","",{
+        httpOnly:true,
+        expires: new Date(Date.now())
+    }).json({
+        success:true,
+        messsage:"LogOut Successfully!"
+    })
+})
+
+export const logoutPatient = catchAsynchErrors(async(req,res,next)=>{
+    res.status(200).cookie("patientToken","",{
+        httpOnly:true,
+        expires: new Date(Date.now())
+    }).json({
+        success:true,
+        messsage:"LogOut Successfully!"
+    })
 })

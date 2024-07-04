@@ -62,7 +62,7 @@ userSchema.pre("save",async function(next){
     this.password = await bcrypt.hash(this.password,12);
 });
 
-userSchema.methods.comparePassword = async function (enteredPassword){      //methods to compare password
+userSchema.methods.comparePassword = async function (enteredPassword){     //methods to compare password
     return await bcrypt.compare(enteredPassword,this.password);
 };
 
@@ -71,6 +71,5 @@ userSchema.methods.generateJWT = function(){
         expiresIn: process.env.JWT_EXPIRES,                                    //Expire Time
     });
 }
-
 
 export const User = mongoose.model("User",userSchema);
