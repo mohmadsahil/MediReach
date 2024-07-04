@@ -6,7 +6,8 @@ import fileUpload from "express-fileupload";
 import {DBConnection} from "./DB/connections.js";
 import cloudinary from "cloudinary";
 import router from "./Routers/messageRouter.js";
-
+import { errorMiddleware } from "./Middlewares/errorMiddleware.js";
+import useRouter from "./Routers/userRouter.js";
 
 const app = express();
 
@@ -27,8 +28,8 @@ app.use(fileUpload({
     tempFileDir:"/tmp/",
 }));
 app.use(express.json());
-
-app.use("/api",router);
+app.use("/api/message",router);
+app.use("/api/user",useRouter);
 
 DBConnection();     //Database Connected
 
@@ -42,6 +43,4 @@ cloudinary.v2.config({
     api_secret:process.env.CLOUDINARY_API_SECRET,
 })
 
-app.get("/",(req,res)=>{
-    res.send("Server Activated");
-})
+app.use(errorMiddleware);
