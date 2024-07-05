@@ -50,6 +50,13 @@ export const userSchema = new mongoose.Schema({
         type:String,
         required:true,
         enum:["Admin","patient","Doctor"],
+    },
+    department:{
+        type:String,
+    },
+    docAvatar:{
+        public_id:String,
+        url:String
     }
 });
 
