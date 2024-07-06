@@ -133,8 +133,8 @@ export const addNewDoctor = catchAsynchErrors(async(req,res,next)=>{
     if(!allowedFormats.includes(docAvatar.mimetype)){    //mimetype is a format of a document, file
         return next(new createError("File Format Not Supported",400));
     }
-    const{firstName,lastName,email,phone,password,gender,dob,adharNumber,department} = req.body;
-    if(!firstName || !lastName || !email || !phone || !password || !gender || !dob || !adharNumber || !department){
+    const{firstName,lastName,email,phone,password,gender,dob,adharNumber,doctorDepartment} = req.body;
+    if(!firstName || !lastName || !email || !phone || !password || !gender || !dob || !adharNumber || !doctorDepartment){
         return next(new createError("Kindly Enter The Full Details!",400));
     }
     const isRegistered = await User.findOne({phone});

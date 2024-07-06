@@ -1,4 +1,4 @@
-import mongoose from mongoose;
+import mongoose from "mongoose";
 import validator from "validator";
 
 const appointmentSchema = new mongoose.Schema({
@@ -60,15 +60,13 @@ const appointmentSchema = new mongoose.Schema({
     },
     hasVisited:{
         type:Boolean,
-        required:true,
+        default:false,
     },
     doctor_id:{
         type:mongoose.Schema.ObjectId,
-        required:true,
     },
     patient_id:{
         type:mongoose.Schema.ObjectId,
-        required:true,
     },
     address:{
         type:String,
@@ -76,7 +74,7 @@ const appointmentSchema = new mongoose.Schema({
     },
     status:{
         type:String,
-        enum:["pending","Accepted","Rejected"],
+        enum:["Pending","Accepted","Rejected"],
         default:"Pending"
     }
 })

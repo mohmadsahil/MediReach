@@ -8,6 +8,7 @@ import cloudinary from "cloudinary";
 import router from "./Routers/messageRouter.js";
 import { errorMiddleware } from "./Middlewares/errorMiddleware.js";
 import useRouter from "./Routers/userRouter.js";
+import appoinmentRouter from "./Routers/appoinmentRouter.js";
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.use(fileUpload({
 app.use(express.json());
 app.use("/api/message",router);
 app.use("/api/user",useRouter);
+app.use("/api/appoinment",appoinmentRouter);
 
 DBConnection();     //Database Connected
 
