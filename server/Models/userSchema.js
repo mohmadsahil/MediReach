@@ -62,21 +62,23 @@ export const userSchema = new mongoose.Schema({
 
 // Pre-save middleware to hash the password
 
-userSchema.pre("save",async function(next){
+userSchema.pre("save",async function(next){         //pre is a Hook in
     if(!this.isModified("password")){
         next();
     }
     this.password = await bcrypt.hash(this.password,12);
 });
 
-userSchema.methods.comparePassword = async function (enteredPassword){     //methods to compare password
-    return await bcrypt.compare(enteredPassword,this.password);
-};
 
-userSchema.methods.generateJWT = function(){
-    return jwt.sign({id:this._id},process.env.JWT_SECRET_KEY,{            //JWT Token Generate(Payload,SecretKey)
-        expiresIn: process.env.JWT_EXPIRES,                                    //Expire Time
-    });
+export const comparePassword = async function(enteredPassword,password){    //methods to compare password
+    return await bcrypt.compare(enteredPassword,password);
+}
+
+
+export const generateJWT = (user)=>{
+    return jwt.sign({id:user._id},process.env.JWT_SECRET_KEY,{  //JWT Token Generate(Payload,SecretKey)
+        expiresIn:process.env.JWT_EXPIRES,                       //Expire Time
+    })
 }
 
 export const User = mongoose.model("User",userSchema);

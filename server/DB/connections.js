@@ -5,7 +5,8 @@ export const DBConnection = ()=>{
     .then(()=>{
         console.log("DataBase is Connected Successfully");
     })
-    .catch(()=>{
+    .catch((err)=>{
+        console.log(err);
         console.log("Some Error Occured kindly Fix it !");
     })
 }

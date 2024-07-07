@@ -1,6 +1,6 @@
 import { catchAsynchErrors } from "../Middlewares/catchAsyncErrors.js";
 import createError from "../Middlewares/errorMiddleware.js";
-import { User } from "../Models/userSchema.js";
+import { comparePassword, User } from "../Models/userSchema.js";
 import {generateToken} from "../Utils/jwtTokens.js";
 import cloudinary from "cloudinary";
 
@@ -36,13 +36,13 @@ export const Login = catchAsynchErrors(async(req,res,next)=>{
         return next(new createError("Password & Confirm Password Is Not Matched!",400))
     }
 
-    const userExist = await User.findOne({phone})
+    const userExist = await User.findOne({phone,role})
 
     if(!userExist){
         return next(new createError("Invalid Details,Kindly Login Again!",400))
     }
 
-    const isPasswordMatched = await userExist.comparePassword(password)
+    const isPasswordMatched = await comparePassword(password,userExist.password)
 
     if(!isPasswordMatched){
         return next(new createError("Invalid Details,Kindly Login Again!",400))
