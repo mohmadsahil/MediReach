@@ -1,18 +1,136 @@
 .mainAboutSection{
-    height: 500px;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    /* background-color: red; */
 }
 .leftAboutSection{
-    height: 500px;
+    height: auto;
     width: 50%;
-    background-color: aqua;
+    /* background-color: aqua; */
+}
+.leftAboutSectionImg{
+    height: 100%;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .rightAboutSection{
-    height: 500px;
+    height: auto;
     width: 50%;
-    background-color: bisque;
+    /* background-color: bisque; */
+}
+.rightAboutSection h1{
+    font-size: 50px;
+     /* background-color: red; */
+}
+.rightAboutSection p{
+    margin-top: 15px;
+    /* background-color: aquamarine; */
+}
+.aboutSubSection{
+    height: auto;
+    width: 100%;
+    display: flex;
+    /* background-color: blue; */
+}
+.leftAboutSubSection{
+    height: auto;
+    width: 50%;
+    /* background-color: brown; */
+}
+.medicalProfessional{
+    height: auto;
+    /* background-color:chocolate; */
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.medicalProfessional p1{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.aboutAppoinmentBtn{
+    margin-top: 20px;
+    background-color: #01BF89;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+}
+.rightAboutSubSection{
+    height: 200px;
+    width: 50%;
+    /* background-color: chartreuse; */
+}
+
+
+/* *********RESPONSIVE CSS************** */
+
+@media screen and (max-width: 1000px){
+    .rightAboutSection h1{
+        font-size: 40px;
+    }
+    .rightAboutSection p{
+        font-size: 12px;
+    }
+    .rightAboutSection p{
+        font-size: 12px;
+    }
+    .medicalProfessional p1{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 850px){
+    .rightAboutSection h1{
+        font-size: 35px;
+    }
+    .rightAboutSection p{
+        font-size: 10px;
+    }
+    .rightAboutSection p{
+        font-size: 10px;
+    }
+    .medicalProfessional p1{
+        font-size: 12px;
+    }
+    .aboutAppoinmentBtn{
+        padding: 8px 16px 8px 16px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 600px){
+    .mainAboutSection{
+        display: flex;
+        flex-direction: column;
+    }
+    .leftAboutSection{
+        height: auto;
+        width: 95%;
+    }
+    .rightAboutSection{
+        height: auto;
+        width: 95%;
+        margin-left: 10px;
+    }
+    .rightAboutSection h1{
+        font-size: 30px;
+    }
+    .rightAboutSection p{
+        font-size: 8px;
+    }
+    .rightAboutSection p{
+        font-size: 8px;
+    }
+    .medicalProfessional p1{
+        font-size: 10px;
+    }
+    .aboutAppoinmentBtn{
+        padding: 6px 12px 6px 12px;
+        font-size: 12px;
+    }
 }
