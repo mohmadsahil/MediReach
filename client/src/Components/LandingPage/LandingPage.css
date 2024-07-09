@@ -1,0 +1,180 @@
+.mainLandingPageDiv{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    background: rgb(237,229,225);
+    background: linear-gradient(0deg, rgba(237,229,225,1) 0%, rgba(215,238,251,1) 10%, rgba(220,238,251,1) 35%, rgba(233,236,233,1) 93%);
+}
+.leftMainLandingPageDiv{
+    height: auto;
+    width: 50%;
+    /* background-color: red; */
+    margin-left: 30px;
+}
+.leftMainLandingPageDiv h1{
+    font-size: 55px;
+    font-weight: 600;
+}
+.buttonAppoinment{
+    background-color: #01BF89;
+    padding: 15px 20px 15px 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.reviewImg{
+    height: 80px;
+    width: auto;
+    margin-top: 20px;
+}
+.leftLandingPageRecord{
+    display: flex;
+    /* justify-content:space-between; */
+    align-items: center;
+    height: auto;
+    width: 100%;
+    /* background-color: gray; */
+}
+.HappyCustomerRecord h1{
+    font-size: 40px;
+    margin: 0px 20px 0px 50px;
+}
+.HappyCustomerRecord p{
+    font-size: 15px;
+    color: #112437;
+    margin: 0px 20px 0px 50px;
+}
+.borderLeftLine{
+    border-left: 4px solid #01BF89;
+    height: 100px;
+}
+.rightMainLandingPageDiv{
+    /* background-color: aquamarine; */
+    /* margin-top: 150px; */
+    height: auto;
+    width: 50%;
+}
+.doctorImg{
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+    background-color:#01BF89;
+    border-radius: 39% 61% 25% 75% / 65% 37% 63% 35% ;
+}
+.featuresImgDiv{
+    width: 85%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* *************RESPONSIVE CSS********************/
+
+@media screen and (max-width: 1200px){
+    .leftMainLandingPageDiv h1{
+        font-size: 45px;
+    }
+    .HappyCustomerRecord h1{
+        font-size: 30px;
+    }
+    .HappyCustomerRecord p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .leftMainLandingPageDiv h1{
+        font-size: 35px;
+    }
+    .HappyCustomerRecord h1{
+        font-size: 25px;
+        margin: 0px 15px 0px 15px;
+    }
+    .HappyCustomerRecord p{
+        font-size: 8px;
+        margin: 0px 15px 0px 15px;
+    }
+    .buttonAppoinment{
+        background-color: #01BF89;
+        padding: 12px 17px 12px 17px;
+    }
+    .leftMainLandingPageDiv p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .leftMainLandingPageDiv h1{
+        font-size: 30px;
+    }
+    .HappyCustomerRecord h1{
+        font-size: 20px;
+        margin: 0px 12px 0px 12px;
+    }
+    .HappyCustomerRecord p{
+        font-size: 5px;
+        margin: 0px 12px 0px 12px;
+    }
+    .buttonAppoinment{
+        background-color: #01BF89;
+        padding: 10px 13px 10px 13px;
+    }
+    .leftMainLandingPageDiv p{
+        font-size: 10px;
+    }
+    .reviewImg{
+        height: 60px;
+    }
+}
+@media screen and (max-width: 670px){
+    .leftMainLandingPageDiv h1{
+        font-size: 25px;
+    }
+    .HappyCustomerRecord h1{
+        font-size: 15px;
+        margin: 0px 10px 0px 10px;
+    }
+    .HappyCustomerRecord p{
+        font-size: 5px;
+        margin: 0px 10px 0px 10px;
+    }
+    .buttonAppoinment{
+        font-size: 15px;
+        background-color: #01BF89;
+        padding: 5px 8px 5px 8px;
+    }
+    .leftMainLandingPageDiv p{
+        font-size: 10px;
+    }
+    .reviewImg{
+        height: 60px;
+    }
+    .borderLeftLine{
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .mainLandingPageDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .leftMainLandingPageDiv{
+        width: 95%;
+        height: auto;
+    }
+    .rightMainLandingPageDiv{
+        width: 95%;
+        height: auto;
+    }
+}

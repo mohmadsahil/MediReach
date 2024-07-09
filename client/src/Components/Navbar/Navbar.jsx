@@ -15,7 +15,7 @@ export const Navbar = () => {
 
     const [isOpen,SetisOpen] = useState(false)
   return (
-    <div className='shadow-md w-full fixed top-0 left-0 bg-green-200'>
+    <div className='shadow-md w-full fixed top-0 left-0 bg-custom-gradient'>
         <div className='md:px-8 py-3 px-7 md:flex  justify-between items-center'>
             <div className='flex font-bold cursor-pointer'>
                 <h1 className='text-[30px] text-[#112437]'>Medi</h1>
@@ -29,11 +29,11 @@ export const Navbar = () => {
             </div>
 
             <div>
-                <ul className={`rounded-xl bg-green-200 md:flex pl-9 md:pl-5 md:pb-0 pb-12 absolute md:static md:z-auto z-[-1]
+                <ul className={`rounded-xl bg-custom-gradient md:flex pl-9 md:pl-5 md:pb-0 pb-12 absolute md:static md:z-auto z-[-1]
                                left-0 w-full transition-all duration-500 ease-in ${isOpen ? "top-12" : "top-[-500px]"}`}>
                     {
                         Links.map(link => (
-                            <li className='font-semibold my-7 md:my-0 md:ml-7 text-[20px] text-[#112437] flex items-center'>
+                            <li className='font-[500] my-7 md:my-0 md:ml-7 text-[20px] text-[#112437] flex items-center'>
                                 <a href="/">{link.name}</a>
                             </li>
                         ))
