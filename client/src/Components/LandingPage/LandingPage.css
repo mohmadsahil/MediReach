@@ -1,4 +1,5 @@
 .mainLandingPageDiv{
+    padding-top: 20px;
     height: auto;
     width: 100%;
     display: flex;
@@ -71,6 +72,9 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.featuresImg{
+    filter: drop-shadow(5px 5px 5px gray);
 }
 
 

@@ -1,0 +1,142 @@
+.mainHealthCareDiv{
+    height: auto;
+    width:100%;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: 3px solid #e3f7ff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-image:url("../../../public/Images/HealthCareBackground.png");
+    background-size: cover;
+}
+.healthCareCard{
+    background-color: white;
+    box-shadow: 2px 3px 20px 2px lightgray;
+    height: 100%;
+    width: 30%;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainHealthCareCard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* background-color: red; */
+}
+.healthCareCardImg{
+    color: #63d0ff;
+    font-size: 50px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.healthCareCardText{
+    font-size: 25px;
+    font-weight: bold;
+}
+.healthCareCardPara{
+    font-size: 15px;
+}
+.healthCareCard button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #63d0ff;
+    padding: 5px 12px 5px 12px;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+
+/* ***************RESPONSIVE CSS*************** */
+
+@media screen and (max-width: 900px){
+    .mainHealthCareCard{
+        height: 35%;
+        width: 100%;
+    }
+    .healthCareCardImg{
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+    .healthCareCardText{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .healthCareCardImg{
+        font-size: 35px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    .healthCareCardText{
+        font-size: 15px;
+    }
+    .healthCareCardPara{
+        font-size: 12px;
+    }
+    .healthCareCard button{
+        margin-top: 8px;
+        padding: 3px 10px 3px 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .healthCareCard{
+        width: 40%;
+    }
+    .healthCareCardImg{
+        font-size: 40px;
+    }
+    .healthCareCardText{
+        font-size: 20px;
+    }
+    .healthCareCardPara{
+        font-size: 12px;
+    }
+    .healthCareCard button{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .healthCareCardImg{
+        font-size: 35px;
+    }
+    .healthCareCardText{
+        font-size: 15px;
+    }
+    .healthCareCardPara{
+        font-size: 10px;
+    }
+    .healthCareCard button{
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .healthCareCardImg{
+        margin-top: 12px;
+        font-size: 32px;
+    }
+    .healthCareCardText{
+        font-size: 13px;
+    }
+    .healthCareCardPara{
+        font-size: 9px;
+    }
+    .healthCareCard button{
+        margin-bottom: 12px;
+        padding: 2px 8px 2px 8px;
+        font-size: 12px;
+    }
+    
+}

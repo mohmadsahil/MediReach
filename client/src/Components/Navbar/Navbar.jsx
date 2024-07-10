@@ -15,7 +15,7 @@ export const Navbar = () => {
 
     const [isOpen,SetisOpen] = useState(false)
   return (
-    <div className='shadow-md w-full fixed top-0 left-0 bg-custom-gradient'>
+    <div className='shadow-md w-full sticky top-0 left-0 bg-custom-gradient'>
         <div className='md:px-8 py-3 px-7 md:flex  justify-between items-center'>
             <div className='flex font-bold cursor-pointer'>
                 <h1 className='text-[30px] text-[#112437]'>Medi</h1>
