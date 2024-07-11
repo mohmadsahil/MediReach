@@ -12,11 +12,9 @@
     /* background-color: aqua; */
 }
 .leftAboutSectionImg{
-    height: 100%;
+    height: auto;
     width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 20px;
 }
 .rightAboutSection{
     height: auto;

@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 import { IoCloseOutline } from "react-icons/io5";
 import { HiMenuAlt1 } from "react-icons/hi";
 
-
-
-
 export const Navbar = () => {
     let Links =[
         {name:"Home", Link:"/"},
