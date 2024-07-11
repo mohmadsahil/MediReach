@@ -35,7 +35,7 @@ export const Navbar = () => {
                             </li>
                         ))
                     }
-                    <button className='bg-[#01BF89] text-white font-bold px-7 py-1.5 text-[20px] md:ml-7 rounded-2xl'>Login</button>
+                    <button  className='bg-[#01BF89] text-white font-bold px-7 py-1.5 text-[20px] md:ml-7 rounded-2xl'>Login</button>
                 </ul>
             </div>
         </div>

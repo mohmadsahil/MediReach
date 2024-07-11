@@ -1,0 +1,184 @@
+.mainSignupDiv{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: auto;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leftMainSignupDiv{
+    height: auto;
+    width: 48%;
+    box-shadow: 2px 2px 10px 2px lightgray;
+    padding: 3% 0 3% 0;
+    border-radius: 20px;
+
+}
+.rightMainSignupDiv{
+    height: auto;
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: bisque; */
+}
+.mainLoginImage{
+    height: 100%;
+    width: 85%;
+    /* background-color: red; */
+}
+.leftSignupNames{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftSignupContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstName, .lastName{
+    width: 80%;
+    height: 100%;
+    padding: 10px 25px 10px 10px;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 2px 2px 10px 2px lightgray;
+    outline: none;
+}
+.DOB{
+    width: 80%;
+    height: 100%;
+    padding: 10px 25px 10px 10px;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 2px 2px 10px 2px lightgray;
+    outline: none;
+}
+.gender{
+    width: 80%;
+    height: 100%;
+    padding: 10px 70px 10px 10px;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 2px 2px 10px 2px lightgray;
+    outline: none;
+}
+.phoneNumber ,.email ,.adharNumber ,.password{
+    width: 80%;
+    height: 100%;
+    padding: 10px 265px 10px 10px;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 2px 2px 10px 2px lightgray;
+    outline: none;
+}
+.genderAndDOB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftSignupContent{
+    display: flex;
+    justify-content: center;
+}
+.leftMainSignupDiv center h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.leftSignupContent button{
+    margin-top: 15px;
+    padding: 8px 100px 8px 100px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+.leftSignupContent button:hover{
+    background-color: #01bf89;
+}
+
+
+/* *******************RESPONSIVE CSS******************* */
+
+@media screen and (max-width: 1050px){
+    .firstName, .lastName ,.DOB{
+        padding: 10px 5px 10px 5px;
+    }
+    .gender{
+        padding: 10px 40px 10px 10px;
+    }
+    .phoneNumber ,.email ,.adharNumber ,.password{
+        padding: 10px 230px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 970px){
+    .leftSignupNames{
+        display: flex;
+        flex-direction: column;
+    }
+    .genderAndDOB{
+        display: flex;
+        flex-direction: column;
+    }
+    .firstName, .lastName{
+        padding: 10px 150px 10px 10px;
+    }
+    .DOB{
+        padding: 10px 200px 10px 10px;
+    }
+    .gender{
+        padding: 10px 150px 10px 10px;
+    }
+    .phoneNumber ,.email ,.adharNumber ,.password{
+        padding: 10px 150px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .firstName, .lastName{
+        padding: 10px 60px 10px 10px;
+    }
+    .DOB{
+        padding: 10px 100px 10px 5px;
+    }
+    .gender{
+        padding: 10px 60px 10px 10px;
+    }
+    .phoneNumber ,.email ,.adharNumber ,.password{
+        padding: 10px 60px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .mainSignupDiv{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .leftMainSignupDiv{
+        margin-top: 10%;
+        width: 95%;
+        height: auto;
+    }
+    .rightMainSignupDiv{
+        width: 95%;
+        height: auto;
+    }
+    .firstName, .lastName{
+        padding: 10px 90px 10px 10px;
+    }
+    .DOB{
+        padding: 10px 140px 10px 5px;
+    }
+    .gender{
+        padding: 10px 90px 10px 10px;
+    }
+    .phoneNumber ,.email ,.adharNumber ,.password{
+        padding: 10px 90px 10px 10px;
+    }
+}

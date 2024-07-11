@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Login.css"
 import { Navbar } from '../../Components/Navbar/Navbar.jsx'
+import { Footer } from '../../Components/Footer/Footer.jsx'
 
 export const Login = () => {
   return (
@@ -17,13 +18,14 @@ export const Login = () => {
                       <input type="text" placeholder='Password'/>
                       <input type="text" placeholder='Confirm Password'/>
                       <button>Login</button>
-                      <h1 style={{marginTop:"20px"}}>Don't have any Account? <a href="">LogIn</a></h1>
+                      <h1 style={{marginTop:"20px"}}>Don't have any Account? <a href="">SignUp</a></h1>
                     </div>
             </div>
             <div className='rightMainLoginDiv'>
                   <img className='mainLoginImage' src="Images/LoginImage.png" alt="" />
             </div>
       </div>
+      <Footer/>
     </>
   )
 }
